@@ -17,19 +17,17 @@ html {
     margin: 0;
     top: 43%;
     left: 53%;
-    letter-spacing: 5vw;
+    letter-spacing: 5vw; 
     transform: translate(-50%, -50%);
     animation: float 10s ease-in-out infinite;
 }
 
-
 @media screen and (max-width: 768px) {
     .mainName {
         font-size: 8vw; 
-        letter-spacing: 6vw;
+        letter-spacing: 6vw; 
     }
 }
-
 
 @media screen and (max-width: 480px) {
     .mainName {
@@ -37,7 +35,6 @@ html {
         letter-spacing: 8vw; 
     }
 }
-
 
 .desc{
     text-align: center;
@@ -71,24 +68,22 @@ div.links img{
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-
 @media screen and (max-width: 768px) {
     div.links img {
         width: 40px;  
-        height: 40px; 
+        height: 40px;
     }
 }
 
-
 @media screen and (max-width: 480px) {
     div.links img {
-        width: 30px;  
+        width: 30px; 
         height: 30px; 
     }
 }
 
 div.links img:hover{
-    filter: brightness(0); 
+    filter: brightness(.5); 
     transform: scale(1.1); 
 }
 
@@ -122,4 +117,31 @@ footer {
     left: 52%;
     bottom: 5px;
     position: absolute;
+}
+
+.version {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: white;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 2%;
+    bottom: 5px;
+    max-width: 50px;
+    max-height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .version {
+        font-size: 13px; 
+        left: 5%; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .version {
+        font-size: 10px; 
+        left: 8%; 
+    }
 }

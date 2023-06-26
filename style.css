@@ -25,15 +25,15 @@ html {
 
 @media screen and (max-width: 768px) {
     .mainName {
-        font-size: 8vw;
-        letter-spacing: 6vw; 
+        font-size: 8vw; 
+        letter-spacing: 6vw;
     }
 }
 
 
 @media screen and (max-width: 480px) {
     .mainName {
-        font-size: 10vw;
+        font-size: 10vw; 
         letter-spacing: 8vw; 
     }
 }
@@ -74,15 +74,15 @@ div.links img{
 
 @media screen and (max-width: 768px) {
     div.links img {
-        width: 40px; 
+        width: 40px;  
         height: 40px; 
     }
 }
 
-/* For mobile devices */
+
 @media screen and (max-width: 480px) {
     div.links img {
-        width: 30px; 
+        width: 30px;  
         height: 30px; 
     }
 }

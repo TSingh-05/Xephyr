@@ -56,7 +56,7 @@ html {
 }
 
 @media screen and (max-width: 480px) {
-    .mainName {
+    .desc {
         font-size: 10px; 
         
     }

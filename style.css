@@ -5,64 +5,61 @@ html {
     padding: 0;
     background-image: url(bg.png);
     overflow: hidden;
-}
-
-.mainName {
+    cursor: url('cursor.svg'), default;
+  }
+  
+  .mainName {
     text-align: center;
     font-family: 'Overpass', sans-serif;
     font-size: 5vw;
-    color: white;
+    color: #542344;
     position: absolute;
+    font-weight: bold;
     padding: 0;
     margin: 0;
     top: 43%;
-    left: 53%;
-    letter-spacing: 5vw; 
+    left: 50%;
     transform: translate(-50%, -50%);
     animation: float 10s ease-in-out infinite;
-}
-
-@media screen and (max-width: 768px) {
-    .mainName {
-        font-size: 8vw; 
-        letter-spacing: 6vw; 
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .mainName {
-        font-size: 10vw; 
-        letter-spacing: 8vw; 
-    }
-}
-
-.desc{
+    cursor: pointer;
+    z-index: 2;
+    letter-spacing: 0.2em; /* Adjust the letter-spacing value to increase or decrease spacing */
+    white-space: nowrap; /* Prevents wrapping */
+  }
+  
+  .mainName span {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .mainName span:hover {
+    transform: scale(1.2);
+  }
+  
+  .desc {
     text-align: center;
     font-family: 'Overpass', sans-serif;
     font-size: 16px;
-    color: white;
+    color: #542344;
     position: relative;
     padding: 0;
     margin: 0;
     top: 620px;
-    left: 52%;
-    transform: translateX(-50%) translateY(-50%);
-}
-@media screen and (max-width: 768px) {
-    .desc {
-        font-size: 12px; 
-        
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .desc {
-        font-size: 10px; 
-        
-    }
-}
-
-.links{
+    left: 51%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-weight: bold;
+    font-style: italic;
+    transition: font-size 0.3s ease-in-out;
+  }
+  
+  .desc:hover {
+    font-size: 20px;
+  }
+  
+  
+  
+  .links {
     margin: 0;
     padding: 0;
     display: flex;
@@ -73,34 +70,98 @@ html {
     top: 495px;
     left: 51%;
     transform: translateX(-50%);
-}
-
-div.links img{
+    z-index: 1;
+  }
+  
+  div.links img {
     width: 50px;
     height: 50px;
     transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-@media screen and (max-width: 768px) {
-    div.links img {
-        width: 40px;  
-        height: 40px;
+  }
+  
+  div.links img:hover {
+    filter: brightness(1) drop-shadow(0 0 10px #A67897);
+    transform: scale(1.1);
+  }
+  
+  footer {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: transparent;
+    z-index: 1;
+  }
+  
+  .footerText {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    color: black;
+    transform: translateX(-50%);
+    left: 52%;
+    bottom: 5px;
+    position: absolute;
+    font-weight: bold;
+  }
+  
+  .version {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: black;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 2%;
+    bottom: 5px;
+    max-width: 50px;
+    max-height: 60px;
+    z-index: 1;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .mainName {
+      font-size: 8vw;
     }
-}
-
-@media screen and (max-width: 480px) {
-    div.links img {
-        width: 50px; 
-        height: 30px; 
+  
+    .desc {
+      font-size: 12px;
     }
-}
-
-div.links img:hover{
-    filter: brightness(.5); 
-    transform: scale(1.1); 
-}
-
-@keyframes float {
+  
+    div.links img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .version {
+      font-size: 13px;
+      left: 5%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .mainName {
+      font-size: 10vw;
+    }
+  
+    .desc {
+      font-size: 10px;
+    }
+  
+    div.links img {
+      width: 50px;
+      height: 30px;
+    }
+  
+    .version {
+      font-size: 10px;
+      left: 8%;
+    }
+  }
+  
+  @keyframes float {
     0% {
       transform: translate(-50%, -50%) translateY(0px);
     }
@@ -110,51 +171,5 @@ div.links img:hover{
     100% {
       transform: translate(-50%, -50%) translateY(0px);
     }
-}
-
-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0px;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    background: transparent;
-}
-
-.footerText {
-    font-family: 'Overpass', sans-serif;
-    font-size: 15px;
-    color: white;
-    transform: translateX(-50%);
-    left: 52%;
-    bottom: 5px;
-    position: absolute;
-}
-
-.version {
-    font-family: 'Overpass', sans-serif;
-    font-size: 15px;
-    letter-spacing: 2px;
-    color: white;
-    position: absolute;
-    transform: translateX(-50%);
-    left: 2%;
-    bottom: 5px;
-    max-width: 50px;
-    max-height: 60px;
-}
-
-@media screen and (max-width: 768px) {
-    .version {
-        font-size: 13px; 
-        left: 5%; 
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .version {
-        font-size: 10px; 
-        left: 8%; 
-    }
-}
+  }
+  

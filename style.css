@@ -136,8 +136,12 @@ html {
     }
   
     .version {
-      font-size: 13px;
+      font-size: 8px;
       left: 5%;
+    }
+
+    .footerText{
+        font-size: 10px;
     }
   }
   
@@ -158,6 +162,10 @@ html {
     .version {
       font-size: 10px;
       left: 8%;
+    }
+
+    .footerText{
+        font-size: 8px; 
     }
   }
   
